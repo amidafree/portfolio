@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロフェッショナルポートフォリオ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" style="box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); padding: 0.5rem 0;">
+        <div class="header-content" style="height: 40px;">
+            <div class="logo">
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="skills" class="skills">
+            <h2><i class="fas fa-laptop-code" style="margin-right: 0.5rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i> スキル</h2>
+            <h3 style="text-align: center; margin-bottom: 1rem;">学習中</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icons" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 600px; margin: 1.5rem auto;">
+                        <!-- 1行目：3つのアイコン -->
+                        <div class="skill-icon" style="transform: none !important; transition: none !important;">
+                            <img src="images/html-5.svg" alt="" class="html-icon">
+                        </div>
+                        <div class="skill-icon" style="transform: none !important; transition: none !important;">
+                            <img src="images/css.svg" alt="" class="css-icon">
+                        </div>
+                        <div class="skill-icon" style="transform: none !important; transition: none !important;">
+                            <img src="images/javascript.svg" alt="" class="javascript-icon">
+                        </div>
+                        <div class="skill-icon" style="transform: none !important; transition: none !important;">
+                          <img src="images/react.svg" alt="" class="react-icon">
+                      </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icons" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 600px; margin: 1.5rem auto;">
+                        
+                        <div class="skill-icon" style="transform: none !important; transition: none !important; grid-column: 2 / 4;">
+                            <img src="images/tailwindcss-icon.svg" alt="" class="tailwindcss-icon">
+                        </div>
+                        <div class="skill-icon" style="transform: none !important; transition: none !important;">
+                            <img src="images/typescript.svg" alt="" class="typescript-icon">
+                        </div>
+                        <div class="skill-icon" style="transform: none !important; transition: none !important;">
+                            <img src="images/next-js.svg" alt="" class="next-js-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 プロフェッショナルポートフォリオ. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
