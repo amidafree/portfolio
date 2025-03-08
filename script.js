@@ -1,45 +1,44 @@
-// スクロールアニメーション
-const observerOptions = {
-    threshold: 0.1
-};
+document.addEventListener('DOMContentLoaded', function() {
+  const fadeElements = document.querySelectorAll('.fade-in');
 
-const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
     });
-}, observerOptions);
+  }, {
+    threshold: 0.1
+  });
 
-document.querySelectorAll('.fade-in').forEach(element => {
+  fadeElements.forEach(element => {
     observer.observe(element);
-});
-
-// スクロール時のヘッダースタイル変更
-const header = document.querySelector('.header');
-const scrollThreshold = 50;
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > scrollThreshold) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-
-// モバイルメニューの制御
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('.nav-menu');
-
-menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// メニューリンクをクリックしたらメニューを閉じる
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
+  });
 }); 
+
+document.querySelector(".about ").addEventListener("click", () => {
+  window.scrollTo({
+    top: 0, // 500px の高さまで移動
+    behavior: "smooth" // スムーズなスクロール
+  });
+});
+
+document.querySelector(".skills").addEventListener("click", () => {
+  const targetElement = document.querySelector(".progress-skills-container"); // スクロール先の要素
+  if (targetElement) {
+    window.scrollTo({
+      top: targetElement.offsetTop - 140, // 要素の位置までスクロール
+      behavior: "smooth"
+    });
+  }
+});
+
+document.querySelector(".projects").addEventListener("click", () => {
+  const targetElement = document.querySelector(".projects-container"); // スクロール先の要素
+  if (targetElement) {
+    window.scrollTo({
+      top: targetElement.offsetTop - 140, // 要素の位置までスクロール
+      behavior: "smooth"
+    });
+  }
+});

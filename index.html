@@ -1,86 +1,114 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="吉村太郎のポートフォリオサイトです。">
+  <title>Portfolio | Taro Yoshimura</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&family=Roboto:wght@300;400;500;700;900&family=Material+Icons&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header" style="box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); padding: 0.5rem 0;">
-        <div class="header-content" style="height: 40px;">
-            <div class="logo">
-                <span class="logo-text"><a href="#home">Thank you for viewing!!</a></span>
-            </div>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <h1 class="logo-text">Thank you for viewing!!</h1>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a class="about nav-link">About</a></li>
+          <li><a class="skills nav-link">Skills</a></li>
+          <li><a class="projects nav-link">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <div class="skills-container">
-            <div class="progress-skills-container">
-                <div class="skill-title">Learning Languages</div>
-                <div class="icons-container">
-                    <div class="skill-icon" style="transform: none !important; transition: none !important;">
-                        <img src="images/html-5.svg" alt="" class="html-icon">
-                    </div>
-                    <div class="skill-icon" style="transform: none !important; transition: none !important;">
-                        <img src="images/css.svg" alt="" class="css-icon">
-                    </div>
-                    <div class="skill-icon" style="transform: none !important; transition: none !important;">
-                        <img src="images/javascript.svg" alt="" class="javascript-icon">
-                    </div>
-                    <div class="skill-icon" style="transform: none !important; transition: none !important;">
-                        <img src="images/react.svg" alt="" class="react-icon">
-                    </div>
-                    
-                </div>
-                <div class="discription">
-                    <p class="discription-p">　比較的学習が容易なWEB系の言語を通じて、プログラミングの基礎を学んでおります。</p>
-                    <p>　<span style="font-family: 'Roboto', sans-serif;">amazon.com</span>等のクローンサイトや、本ポートフォリオサイトの作成を通じて実践的な技術を身に着けています。</p>
-                    <p>　現在は実務作業にも対応できることを目指し、<span style="font-family: 'Roboto', sans-serif;">React</span>を集中的に学習しております。</p>
-                    
-                </div>
-                
-            </div>
-            <div class="future-skills-container">
-                <div class="skill-title">Planned Learning Languages</div>
-                <div class="icons-container">
-                    <div class="skill-icon" style="transform: none !important; transition: none !important; ">
-                        <img src="images/tailwindcss-icon.svg" alt="" class="tailwindcss-icon">
-                    </div>
-                <div class="skill-icon" style="transform: none !important; transition: none !important;">
-                    <img src="images/typescript.svg" alt="" class="typescript-icon">
-                </div>
-                <div class="skill-icon" style="transform: none !important; transition: none !important;">
-                    <img src="images/next-js.svg" alt="" class="next-js-icon">
-                </div>
-                </div>
-                <div class="discription">
-                    <p>　今後のステップアップとして、開発スピード向上等に不可欠な<span style="font-family: 'Roboto', sans-serif;">Tailwind CSS</span>、<span style="font-family: 'Roboto', sans-serif;">WEB</span>開発で現在主流の言語である<span style="font-family: 'Roboto', sans-serif;">TypeScript</span>の学習を予定しています。</p>
-                    
-                    <p>　また、バックエンドを含めた開発を可能にするため、<span style="font-family: 'Roboto', sans-serif;">Next.js</span>の習得を2025年の最終的な目標としています。</p>  
-                </div>
-                   
-            </div>  
-            
+  <main>
+    <section id="about" class="about-container">
+      <div class="about-content fade-in">
+        <h2 class="about-title">About Me</h2>
+        <div class="about-discription">
+          <p>こんにちは。WEBエンジニアを目指している吉村太郎と申します。</p>
+          <p>私は「つくること」が大好きで、プログラミングという手段で様々なWEBサービスをつくり出せることに楽しみを感じ、学習を始めました。初めはWEB制作に興味を抱いていましたが、AIの発展による開発の効率化を目の当たりにし、フルスタック開発にも興味を抱くようになりました。</p>
+          <p>また、今後必要とされるエンジニアはAIと共存できるエンジニアであると確信しており、CursorをはじめとするAIツールを積極的に使用し、AIの追い風に乗れるエンジニアを目指しています。</p>
         </div>
-        
-    </main>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Portfolio. All rights reserved.</p>
-    </footer>
+    <section id="skills" class="skills-container">
+      <div class="progress-skills-container fade-in">
+        <h2 class="skill-title">Learning Languages</h2>
+        <div class="icons-container">
+          <img src="images/html-5.svg" alt="HTML5" class="skill-icon html-icon">
+          <img src="images/css.svg" alt="CSS3" class="skill-icon css-icon">
+          <img src="images/javascript.svg" alt="JavaScript" class="skill-icon javascript-icon">
+          <img src="images/react.svg" alt="React" class="skill-icon react-icon">
+        </div>
+        <div class="discription">
+          <p>基本的なWEB系言語の学習を通じて、プログラミングの基礎を学んでいます。</p>
+          <p><span class="font-roboto">amazon.com</span>等のクローンサイトや、本ポートフォリオサイトの作成を通じてサイト作成の技術を身に着けています。</p>
+          <p>現在は実務作業にも対応できることを目指し、<span class="font-roboto">React</span>を集中的に学習しています。</p>
+        </div>
+      </div>
+
+      <div class="future-skills-container fade-in">
+        <h2 class="skill-title">Planned Learning Languages</h2>
+        <div class="icons-container">
+          <img src="images/tailwindcss-icon.svg" alt="Tailwind CSS" class="skill-icon tailwindcss-icon">
+          <img src="images/typescript.svg" alt="TypeScript" class="skill-icon typescript-icon">
+          <img src="images/next-js.svg" alt="Next.js" class="skill-icon next-js-icon">
+        </div>
+        <div class="discription">
+          <p>今後のステップアップとして、開発スピード向上等に不可欠な<span class="font-roboto">Tailwind CSS</span>、<span class="font-roboto">WEB</span>開発で現在主流の言語である<span class="font-roboto">TypeScript</span>を学習予定です。</p>
+          <p>また、バックエンドを含めた知識を深めるため、<span class="font-roboto">Next.js</span>の習得を2025年の最終的な目標としています。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-container skills-container">
+      <div class="future-skills-container fade-in project-container">
+        <a href="">
+          <h2 class="skill-title skill-title-project">YouTube.com</h2>
+          <div class="discription discription-project">
+          <img src="images/html-thumbnail.png" alt="YouTubeクローンサイトのスクリーンショット" class="project-image">
+          <p>HTML、CSSの学習として、YouTubeのクローンサイトを作成しました。</p>
+          <p>flexやgridを使用したコンテンツ配置やレスポンシブデザインなどのページ作成スキルを習得しました。<p>
+          <p>JavaScriptの学習後、HTMLの生成を適用しました。</p>
+        </div>
+        </a>
+      </div>
+
+      <div class="progress-skills-container fade-in project-container">
+        <a href="">
+          <h2 class="skill-title">amazon.com</h2>
+          <div class="discription">
+          <img src="images/amazon-clone.png" alt="Amazonクローンサイトのスクリーンショット" class="project-image">
+          <p>JavaScriptの学習として、amazon.comのクローンサイトを作成しました。</p>
+          <p>DOM操作によるHTMLの生成や、ループ処理を利用したデータの取得、MVCなど実践的なスキルを習得しました。</p>
+        </div>
+        </a>
+      </div>
+
+      <div class="progress-skills-container fade-in project-container">
+        <a href="">
+          <h2 class="skill-title">amazon.com</h2>
+          <div class="discription">
+          <img src="images/amazon-clone.png" alt="Amazonクローンサイトのスクリーンショット" class="project-image">
+          <p>JavaScriptの学習として、amazon.comのクローンサイトを作成しました。</p>
+          <p>DOM操作によるHTMLの生成や、ループ処理を利用したデータの取得など、実践的なスキルを習得しました。</p>
+        </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2025 Taro Yoshimura. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html> 

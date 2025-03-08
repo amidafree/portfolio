@@ -6,6 +6,24 @@
   --text-color: #1d1d1f;
   --light-gray: #f5f5f7;
   --border-color: #d2d2d7;
+  --gradient-bg: linear-gradient(225deg,  
+    #fc955b 0%, 
+    #fc955b 29%,
+    #f25f33 29%, 
+    #f25f33 42%,
+    #e11a5d 42%, 
+    #e11a5d 44%,
+    #9e1b5f 44%, 
+    #9e1b5f 60%,
+    #521455 60%, 
+    #521455 67%, 
+    #24184a 67%, 
+    #24184a 100%
+  );
+  --container-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  --container-blur: blur(15px) brightness(105%);
+  --header-height: 40px;
+  --background: rgba(255, 255, 255, 0.07);
 }
 
 * {
@@ -18,18 +36,26 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.47059; 
   color: var(--text-color);
-  background: linear-gradient(225deg, rgb(216, 116, 142) 0%, rgb(216, 116, 142) 29%,rgb(180, 100, 149) 29%, rgb(180, 100, 149) 42%,rgb(144, 85, 156) 42%, rgb(144, 85, 156) 44%,rgb(107, 69, 162) 44%, rgb(107, 69, 162) 60%,rgb(71, 54, 169) 60%, rgb(71, 54, 169) 67%,rgb(35, 38, 176) 67%, rgb(35, 38, 176) 100%);
-            
+  background: var(--gradient-bg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased; 
-  padding-top: 100px;  
   
-  height: 2000px;
-  
-  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+}
 
-
+/* Utility classes */
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
 
 /* 
 * Prevents issues when the parent creates a 
@@ -52,41 +78,44 @@ body {
 .skills-container {
   display: flex;
   justify-content: center;
-  gap: 70px;
+  gap: 80px;
   height: auto;
-  margin-bottom: 50px;
+  margin-bottom: 130px;
   color: white;
   font-family: 'Sawarabi Gothic', sans-serif;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding: 0 35px;
 }
 
 
 
 .progress-skills-container {
   display: flex;
-  padding-top: 20px;
+  padding-top: 28px;
+  padding-bottom: 0px;
   flex-direction: column;
   width: 500px;
-  min-height: 500px;
+  min-height: 450px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 0px;
   align-items: center;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);  
-  backdrop-filter: blur(10px) saturate(150%); 
+  backdrop-filter: var(--container-blur); 
+  background: var(--background);
 }
 
 .future-skills-container {
   display: flex;
-  padding-top: 20px;
+  padding-top: 28px;
+  padding-bottom: 0px;
   flex-direction: column;
   width: 500px;
-  min-height: 500px;
+  min-height: 450px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 0px;
   align-items: center;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);  
-  backdrop-filter: blur(10px) saturate(150%); 
+  backdrop-filter: var(--container-blur); 
+  background: var(--background);
 }
 
 .skill-title {
@@ -97,6 +126,7 @@ body {
   margin-bottom: 24px;
   text-align: center;
 }
+
 .icons-container {
   display: flex;
   justify-content: space-evenly;
@@ -106,7 +136,7 @@ body {
 
 .discription {
   font-size: 1.2rem;
-  font-weight: normal;
+  font-weight: bold;
   color: white;
   padding: 50px;
   padding-top: 30px;
@@ -155,11 +185,11 @@ body {
 }
 
 footer {
-  
-  height: 50px;
+  margin-top: auto;
+  height: 20px;
   width: 100%;
   background-color: var(--light-gray);
-  padding: 2rem;
+  padding: 1.8rem;
   text-align: center;
   text-justify: center;
   align-items: center;
@@ -167,9 +197,10 @@ footer {
   display: flex;
   font-size: 0.8rem;
   color: white; 
-  opacity: 0.8;
-  background-color: rgba(255, 255, 255, 0.01); 
-  backdrop-filter: blur(10px) saturate(150%);
+  background-color: var(--background); 
+  backdrop-filter: var(--container-blur);
+  background: var(--background);
+
 }
 
 .header {
@@ -178,9 +209,12 @@ footer {
   left: 0;
   width: 100%;
   z-index: 1000;
-  backdrop-filter: blur(20px) saturate(150%);
-  transition: all 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.01); 
+  backdrop-filter: var(--container-blur);
+  background-color: rgba(255, 255, 255, 0.01);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 0.5rem 0;
+
+  background: var(--background);
 }
 
 .header-content {
@@ -190,7 +224,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+  height: var(--header-height);
 }
 
 .logo {
@@ -207,7 +241,6 @@ footer {
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.02em;
   font-family: 'Roboto', sans-serif;
-  cursor: pointer;
 }
 
 .nav-menu ul {
@@ -225,6 +258,7 @@ footer {
   position: relative;
   transition: color 0.3s ease;
   font-family: 'Roboto', sans-serif;
+  cursor: pointer;
 }
 
 .nav-link::after {
@@ -254,4 +288,133 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
+  body {
+    height: 2500px;
+  }
+
+  .progress-skills-container,
+  .future-skills-container {
+    width: 100%;
+  }
+
+  .header-content {
+    padding: 1rem;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+  }
+
+  .nav-menu ul {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0.5rem;
+  }
+
+  .logo-text {
+    font-size: 0.9rem;
+  }
+
+  .nav-menu ul {
+    gap: 0.8rem;
+  }
+
+  .nav-link {
+    font-size: 0.75rem;
+  }
+}
+  
+
+.about-container {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.about-content {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);  
+  backdrop-filter: var(--container-blur);
+  height: auto;
+  width: 800px;
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+
+  background: var(--background);
+}
+
+.about-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 2s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-discription {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 50px;
+  padding-top: 0px;
+  padding-bottom: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.about-discription h1 {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.about-discription p {
+  margin-bottom: 10px;
+}
+
+.project-container {
+  width: 340px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.project-image {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.description-project {
+  margin-top: 0;
+}
+
+.skill-title-project {
+  margin-bottom:0px ;
 }
