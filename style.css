@@ -7,18 +7,18 @@
   --light-gray: #f5f5f7;
   --border-color: #d2d2d7;
   --gradient-bg: linear-gradient(225deg,  
-    #fc955b 0%, 
-    #fc955b 29%,
-    #f25f33 29%, 
-    #f25f33 42%,
-    #e11a5d 42%, 
-    #e11a5d 44%,
-    #9e1b5f 44%, 
-    #9e1b5f 60%,
-    #521455 60%, 
-    #521455 67%, 
-    #24184a 67%, 
-    #24184a 100%
+    #006079 0%, 
+    #006079 29%,
+    #00abbd  29%, 
+    #00abbd  42%,
+    #bdaea3  42%, 
+    #bdaea3  44%,
+    #d39165 44%, 
+    #d39165 60%,
+    #8f4a1c 60%, 
+    #8f4a1c 67%, 
+    #403933 67%, 
+    #403933 100%
   );
   --container-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
   --container-blur: blur(15px) brightness(105%);
@@ -46,22 +46,18 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),  url(images/stars.png)
 }
 
 a {
   text-decoration: none;
 }
 
-/* Utility classes */
 .font-roboto {
   font-family: 'Roboto', sans-serif;
 }
 
-/* 
-* Prevents issues when the parent creates a 
-* stacking context. (For example, using the transform
-* property )
-*/
 .box::after {
   content: "";
   z-index: -1;
