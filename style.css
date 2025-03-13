@@ -25,7 +25,7 @@
   --header-height: 40px;
   --background: rgba(255, 255, 255, 0.07);
 
-  --filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.4));
+  --filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.4));
   --shadow: 0px 0px 24px rgba(255, 255, 255, 0.15);
 
 }
@@ -52,6 +52,7 @@ body {
   flex-direction: column;
 
   background-image:  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),  url(images/stars.jpg);
+  
 }
 
 a {
@@ -129,6 +130,8 @@ a {
   color: white;
   margin-bottom: 24px;
   text-align: center;
+  filter: var(--filter);
+
 }
 
 .icons-container {
@@ -146,10 +149,14 @@ a {
   padding-top: 30px;
   word-break: break-all;
   padding-bottom: 20px;
+  filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.1));
+
 }
 
 .discription p {
   margin-bottom: 16px;
+  filter: var(--filter);
+
 }
 
 .discription .discription-p {
@@ -252,14 +259,16 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.02em;
+  filter: var(--filter);
   font-family: 'Roboto', sans-serif;
 }
 
 .nav-menu ul {
   display: flex;
   gap: 2rem;
+  filter: var(--filter);
   list-style: none;
-}
+} 
 
 .nav-link {
   color: white;
@@ -377,6 +386,8 @@ footer {
   font-weight: 600;
   color: white;
   margin-bottom: 24px;
+  filter: var(--filter);
+
 }
 
 .fade-in {
@@ -399,6 +410,8 @@ footer {
   padding-bottom: 30px;
   font-size: 1.2rem;
   font-weight: bold;
+  filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.1));
+  
 }
 
 .about-discription h1 {
@@ -429,6 +442,7 @@ footer {
   object-fit: cover;
   object-position: middle;
   margin-bottom: 10px;
+  filter: var(--filter);
   margin-top: 0px;
 }
 
@@ -438,4 +452,6 @@ footer {
 
 .skill-title-project {
   margin-bottom:0px ;
+  filter: var(--filter);
+
 }
