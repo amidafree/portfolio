@@ -409,6 +409,11 @@ footer {
   width: 340px;
   cursor: pointer;
   text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.project-container:hover {
+  transform: translateY(-6px) scale(1.05);
 }
 
 .project-image {
