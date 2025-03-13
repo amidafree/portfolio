@@ -50,7 +50,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),  url(images/stars.jpg)
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),  url(images/stars.jpg);
 }
 
 a {

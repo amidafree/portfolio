@@ -42,3 +42,16 @@ document.querySelector(".projects").addEventListener("click", () => {
     });
   }
 });
+
+const body = document.querySelector('body');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      body.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),  url(images/stars.jpg)';
+      observer.unobserve(body);
+    }
+  });
+});
+
+observer.observe(body);
