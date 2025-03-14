@@ -18,26 +18,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.querySelector(".about ").addEventListener("click", () => {
   window.scrollTo({
-    top: 0, // 500px の高さまで移動
-    behavior: "smooth" // スムーズなスクロール
+    top: 0, 
+    behavior: "smooth" 
   });
 });
 
 document.querySelector(".skills").addEventListener("click", () => {
-  const targetElement = document.querySelector(".progress-skills-container"); // スクロール先の要素
+  const targetElement = document.querySelector(".progress-skills-container"); 
   if (targetElement) {
     window.scrollTo({
-      top: targetElement.offsetTop - 140, // 要素の位置までスクロール
+      top: targetElement.offsetTop - 140, 
       behavior: "smooth"
     });
   }
 });
 
 document.querySelector(".projects").addEventListener("click", () => {
-  const targetElement = document.querySelector(".projects-container"); // スクロール先の要素
+  const targetElement = document.querySelector(".projects-container"); 
   if (targetElement) {
     window.scrollTo({
-      top: targetElement.offsetTop - 140, // 要素の位置までスクロール
+      top: targetElement.offsetTop - 140, 
       behavior: "smooth"
     });
   }
